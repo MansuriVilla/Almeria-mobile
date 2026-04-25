@@ -1,0 +1,771 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cloud Buzz</title>
+    <link rel="stylesheet" preload href="styles/style.css" />
+    <link rel="stylesheet" preload href="styles/responsive.css" />
+    <!-- Horizon Slider CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/mansurivilla/horizonslider/prod/css/HorizonSlider.min.css"
+    />
+    <!-- GSAP (required by HorizonSlider) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+
+    <meta property="og:title" content="Cloud Buzz" />
+    <meta property="og:description" content="Cloud Buzz" />
+    <meta property="og:image" content="images/logo.png" />
+    <meta property="og:url" content="https://cloudbuzz.com" />
+    <meta property="og:type" content="website" />
+
+    <meta name="twitter:title" content="Cloud Buzz" />
+    <meta name="twitter:description" content="Cloud Buzz" />
+    <meta name="twitter:image" content="images/logo.png" />
+    <meta name="twitter:url" content="https://cloudbuzz.com" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script src="scripts/core.js" defer></script>
+  </head>
+  <body>
+    <header class="site_header">
+      <div class="header_announce">
+        <div class="announce_track">
+          <span>Wholesale Rates</span>
+          <span class="announce_dot">•</span>
+          <span>Unique Varieties</span>
+          <span class="announce_dot">•</span>
+          <span>No Lot System</span>
+          <span class="announce_dot">•</span>
+          <span>Free Shipping on orders over ₹500</span>
+          <span class="announce_dot">•</span>
+          <span>Wholesale Rates</span>
+          <span class="announce_dot">•</span>
+          <span>Unique Varieties</span>
+          <span class="announce_dot">•</span>
+          <span>No Lot System</span>
+          <span class="announce_dot">•</span>
+          <span>Free Shipping on orders over ₹500</span>
+          <span class="announce_dot">•</span>
+        </div>
+      </div>
+      <div
+        class="site_container header_main site_flex align_center justify_between"
+      >
+        <button class="hamburger" aria-label="Menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <a href="/" class="header_left logo">
+          <img
+            src="https://cloudbuzz.in/cdn/shop/files/t97k980-9.png?v=1708241223&width=280"
+            alt="Logo"
+            height="200"
+            width="400"
+            decoding="async"
+          />
+        </a>
+        <nav class="header_center main_navigation site_flex">
+          <button class="nav_close" aria-label="Close menu">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M18 6L6 18M6 6l12 12" />
+            </svg>
+          </button>
+          <div class="nav_overlay"></div>
+          <ul class="header_navigation--items">
+            <li class="header_navigation--item mobile_only">
+              <button
+                type="button"
+                class="header_icon icon_search"
+                aria-label="Open search"
+              >
+                <img
+                  src="./assets/search-icon.png"
+                  decoding="async"
+                  alt="Search icon"
+                  height="20"
+                  width="20"
+                />
+              </button>
+            </li>
+            <li class="header_navigation--item">
+              <a href="index.html">Home</a>
+            </li>
+            <li class="header_navigation--item">
+              <a href="collections/demo-collection.html">Mobile Cases</a>
+            </li>
+            <li class="header_navigation--item">
+              <a href="collections/demo-collection.html">Phone Charms</a>
+            </li>
+            <li class="header_navigation--item">
+              <a href="collections/demo-collection.html">Tempered Glass</a>
+            </li>
+            <li class="header_navigation--item">
+              <a href="collections/demo-collection.html"
+                >Additional Accessories</a
+              >
+            </li>
+            <li class="header_navigation--item">
+              <a href="collections/demo-collection.html">Collections</a>
+            </li>
+            <li class="header_navigation--item"><a href="#">About Us</a></li>
+            <li class="header_navigation--item"><a href="#">Contact Us</a></li>
+          </ul>
+        </nav>
+        <div class="header_right">
+          <button
+            type="button"
+            class="header_icon icon_search desktop_only"
+            aria-label="Open search"
+            aria-expanded="false"
+          >
+            <img
+              src="./assets/search-icon.png"
+              decoding="async"
+              alt="Search icon"
+              height="20"
+              width="20"
+            />
+          </button>
+          <button
+            type="button"
+            class="header_icon icon_cart"
+            aria-label="Open cart"
+            aria-expanded="false"
+          >
+            <img
+              src="./assets/cart-icon.png"
+              decoding="async"
+              alt="Cart icon"
+              height="20"
+              width="20"
+            />
+          </button>
+        </div>
+      </div>
+
+      <!-- Search Modal -->
+      <div
+        class="search_modal"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Search"
+      >
+        <div class="search_backdrop"></div>
+        <div class="search_container">
+          <div class="search_header site_flex align_center justify_between">
+            <div class="search_input_wrap site_flex align_center">
+              <img
+                src="./assets/search-icon.png"
+                alt=""
+                height="20"
+                width="20"
+              />
+              <input
+                type="search"
+                class="search_input"
+                placeholder="Search products..."
+                aria-label="Search products"
+              />
+            </div>
+            <button
+              type="button"
+              class="search_close"
+              aria-label="Close search"
+            >
+              &times;
+            </button>
+          </div>
+          <div class="search_suggestions">
+            <p class="search_suggestions--title">Most Popular</p>
+            <ul class="search_suggestions--list">
+              <li><a href="#" class="search_suggestion">Mirror Cases</a></li>
+              <li><a href="#" class="search_suggestion">Sparkle Series</a></li>
+              <li><a href="#" class="search_suggestion">Heart Design</a></li>
+              <li><a href="#" class="search_suggestion">Clear Cases</a></li>
+              <li><a href="#" class="search_suggestion">iPhone 14 Cases</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cart Drawer -->
+      <div
+        class="cart_drawer"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Shopping cart"
+      >
+        <div class="cart_backdrop"></div>
+        <div class="cart_container">
+          <div class="cart_header site_flex align_center justify_between">
+            <h2 class="cart_title">Your Cart</h2>
+            <button type="button" class="cart_close" aria-label="Close cart">
+              &times;
+            </button>
+          </div>
+          <div class="cart_content">
+            <div class="cart_empty">
+              <img src="./assets/cart-icon.png" alt="" />
+              <p>Your cart is empty</p>
+              <a href="collections/demo-collection.html" class="btn btn_primary"
+                >Start Shopping</a
+              >
+            </div>
+          </div>
+          <div class="cart_footer" style="display: none">
+            <a href="#" class="btn btn_primary">Checkout</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="site_sections site_flex site_flex--column gap_main">
+      <section class="site_section">
+        <div class="horizon-slider_container hero_slider">
+          <div class="horizon-slider_track">
+            <div class="horizon-slide">
+              <div
+                class="hero_slide_inner"
+                style="
+                  background-image: url(&quot;https://cloudbuzz.in/cdn/shop/files/SweetheartSparkleMirrorPhoneCase_11.jpg?v=1774437484&width=1200&quot;);
+                "
+              >
+                <div class="hero_slide_overlay"></div>
+                <div
+                  class="hero_slide_content site_flex site_flex--column align_center justify_center"
+                >
+                  <p class="hero_slide_tag">New Arrival</p>
+                  <h2 class="hero_slide_title">
+                    Sweetheart Sparkle Mirror Case
+                  </h2>
+                  <p class="hero_slide_desc">
+                    Drop-tested protection meets timeless mirror finish.
+                    Available in multiple colors.
+                  </p>
+                  <a
+                    href="collections/demo-collection.html"
+                    class="btn btn_primary"
+                    >Shop the Collection</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="horizon-slide">
+              <div
+                class="hero_slide_inner"
+                style="
+                  background-image: url(&quot;https://cloudbuzz.in/cdn/shop/files/SweetheartSparkleMirrorPhoneCase_1.jpg?v=1774437484&width=1200&quot;);
+                "
+              >
+                <div class="hero_slide_overlay"></div>
+                <div
+                  class="hero_slide_content site_flex site_flex--column align_center justify_center"
+                >
+                  <p class="hero_slide_tag">Best Seller</p>
+                  <h2 class="hero_slide_title">Sparkle Mirror Series 2</h2>
+                  <p class="hero_slide_desc">
+                    Our best-selling series now in a bold new edition. Built to
+                    impress every time.
+                  </p>
+                  <a href="products/demo-product.html" class="btn btn_primary"
+                    >View Product</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="horizon-slide">
+              <div
+                class="hero_slide_inner"
+                style="
+                  background-image: url(&quot;https://cloudbuzz.in/cdn/shop/files/SweetheartSparkleMirrorPhoneCase_3.jpg?v=1774437484&width=1200&quot;);
+                "
+              >
+                <div class="hero_slide_overlay"></div>
+                <div
+                  class="hero_slide_content site_flex site_flex--column align_center justify_center"
+                >
+                  <p class="hero_slide_tag">Minimalist</p>
+                  <h2 class="hero_slide_title">Clear Style Edition</h2>
+                  <p class="hero_slide_desc">
+                    Let your phone's design shine through with our ultra-slim
+                    clear mirror case.
+                  </p>
+                  <a href="products/demo-product.html" class="btn btn_primary"
+                    >Shop Now</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="horizon-slide">
+              <div
+                class="hero_slide_inner"
+                style="
+                  background-image: url(&quot;https://cloudbuzz.in/cdn/shop/files/SweetheartSparkleMirrorPhoneCase_10.jpg?v=1774437484&width=1200&quot;);
+                "
+              >
+                <div class="hero_slide_overlay"></div>
+                <div
+                  class="hero_slide_content site_flex site_flex--column align_center justify_center"
+                >
+                  <p class="hero_slide_tag">Limited Edition</p>
+                  <h2 class="hero_slide_title">Heart Design Mirror Case</h2>
+                  <p class="hero_slide_desc">
+                    Express your love in style — the iconic Heart Design case.
+                    Limited stock available.
+                  </p>
+                  <a href="products/demo-product.html" class="btn btn_primary"
+                    >Get Yours</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="site_section site_container section_collections">
+        <header class="section_header site_flex justify_between align_end">
+          <h2 class="section_title">Shop by Collection</h2>
+          <a href="collections/demo-collection.html" class="view_all_link"
+            >View all</a
+          >
+        </header>
+        <div class="collection_circles site_flex">
+          <a
+            href="collections/demo-collection.html"
+            class="collection_circle site_flex site_flex--column align_center"
+          >
+            <p class="circle_label">New Arrivals</p>
+            <div class="circle_ring">
+              <img
+                src="https://cloudbuzz.in/cdn/shop/files/SweetheartSparkleMirrorPhoneCase_11.jpg?v=1774437484&width=400"
+                alt="Mirror Cases"
+                loading="lazy"
+              />
+            </div>
+            <span class="circle_name">Mirror Cases</span>
+          </a>
+
+          <a
+            href="collections/demo-collection.html"
+            class="collection_circle site_flex site_flex--column align_center"
+          >
+            <p class="circle_label">Best Sellers</p>
+            <div class="circle_ring">
+              <img
+                src="https://cloudbuzz.in/cdn/shop/files/SweetheartSparkleMirrorPhoneCase_1.jpg?v=1774437484&width=400"
+                alt="Sparkle Series"
+                loading="lazy"
+              />
+            </div>
+            <span class="circle_name">Sparkle Series</span>
+          </a>
+
+          <a
+            href="collections/demo-collection.html"
+            class="collection_circle site_flex site_flex--column align_center"
+          >
+            <p class="circle_label">Limited Edition</p>
+            <div class="circle_ring">
+              <img
+                src="https://cloudbuzz.in/cdn/shop/files/SweetheartSparkleMirrorPhoneCase_10.jpg?v=1774437484&width=400"
+                alt="Heart Design"
+                loading="lazy"
+              />
+            </div>
+            <span class="circle_name">Heart Design</span>
+          </a>
+
+          <a
+            href="collections/demo-collection.html"
+            class="collection_circle site_flex site_flex--column align_center"
+          >
+            <p class="circle_label">Minimalist</p>
+            <div class="circle_ring">
+              <img
+                src="https://cloudbuzz.in/cdn/shop/files/SweetheartSparkleMirrorPhoneCase_3.jpg?v=1774437484&width=400"
+                alt="Clear Style"
+                loading="lazy"
+              />
+            </div>
+            <span class="circle_name">Clear Style</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="site_section section_featured_products site_container">
+        <header class="section_header site_flex justify_between align_end">
+          <h2 class="section_title">Trending Right Now</h2>
+          <a href="collections/demo-collection.html" class="view_all_link"
+            >View all</a
+          >
+        </header>
+
+        <section class="collection_grid site_grid">
+          <a
+            href="products/demo-product.html"
+            class="product_card site_flex site_flex--column"
+          >
+            <figure class="product_image">
+              <img
+                src="https://cloudbuzz.in/cdn/shop/files/SweetheartSparkleMirrorPhoneCase_11.jpg?v=1774437484&width=500"
+                alt="Sweetheart Sparkle Mirror Phone Case"
+                width="500"
+                height="500"
+                loading="lazy"
+              />
+            </figure>
+            <div class="product_info site_flex site_flex--column">
+              <p class="product_vendor">Cloudbuzz</p>
+              <h3 class="product_title">
+                Sweetheart Sparkle Mirror Phone Case
+              </h3>
+              <p class="product_price">Rs. 125.00</p>
+            </div>
+          </a>
+
+          <a
+            href="products/demo-product.html"
+            class="product_card site_flex site_flex--column"
+          >
+            <figure class="product_image">
+              <img
+                src="https://cloudbuzz.in/cdn/shop/files/SweetheartSparkleMirrorPhoneCase_1.jpg?v=1774437484&width=500"
+                alt="Sparkle Mirror Case Series 2"
+                width="500"
+                height="500"
+                loading="lazy"
+              />
+            </figure>
+            <div class="product_info site_flex site_flex--column">
+              <p class="product_vendor">Cloudbuzz</p>
+              <h3 class="product_title">Sparkle Mirror Case Series 2</h3>
+              <p class="product_price">Rs. 145.00</p>
+            </div>
+          </a>
+
+          <a
+            href="products/demo-product.html"
+            class="product_card site_flex site_flex--column"
+          >
+            <figure class="product_image">
+              <img
+                src="https://cloudbuzz.in/cdn/shop/files/SweetheartSparkleMirrorPhoneCase_3.jpg?v=1774437484&width=500"
+                alt="Sparkle Mirror Case Clear"
+                width="500"
+                height="500"
+                loading="lazy"
+              />
+            </figure>
+            <div class="product_info site_flex site_flex--column">
+              <p class="product_vendor">Cloudbuzz</p>
+              <h3 class="product_title">Sparkle Mirror Case - Clear Style</h3>
+              <p class="product_price">Rs. 110.00</p>
+            </div>
+          </a>
+
+          <a
+            href="products/demo-product.html"
+            class="product_card site_flex site_flex--column"
+          >
+            <figure class="product_image">
+              <img
+                src="https://cloudbuzz.in/cdn/shop/files/SweetheartSparkleMirrorPhoneCase_10.jpg?v=1774437484&width=500"
+                alt="Heart Design Mirror Case"
+                width="500"
+                height="500"
+                loading="lazy"
+              />
+            </figure>
+            <div class="product_info site_flex site_flex--column">
+              <p class="product_vendor">Cloudbuzz</p>
+              <h3 class="product_title">Heart Design Mirror Case</h3>
+              <p class="product_price">Rs. 135.00</p>
+            </div>
+          </a>
+        </section>
+      </section>
+
+      <section class="site_section section_featured_single">
+        <div class="site_container">
+          <header
+            class="section_header site_flex justify_between align_end"
+            style="justify-content: center; margin-bottom: 50px"
+          >
+            <h2 class="section_title">Featured Product</h2>
+          </header>
+
+          <article class="pdp_layout site_grid">
+            <figure class="pdp_gallery site_flex">
+              <nav
+                class="pdp_thumbnails site_flex site_flex--column"
+                aria-label="Product thumbnails"
+              >
+                <img
+                  src="https://cloudbuzz.in/cdn/shop/files/SweetheartSparkleMirrorPhoneCase_11.jpg?v=1774437484&width=500"
+                  alt="thumbnail 1"
+                  class="active site_flex"
+                  height="50"
+                  width="50"
+                  loading="lazy"
+                />
+                <img
+                  src="https://cloudbuzz.in/cdn/shop/files/SweetheartSparkleMirrorPhoneCase_1.jpg?v=1774437484&width=500"
+                  alt="thumbnail 2"
+                  class="site_flex"
+                  height="50"
+                  width="50"
+                  loading="lazy"
+                />
+                <img
+                  src="https://cloudbuzz.in/cdn/shop/files/SweetheartSparkleMirrorPhoneCase_3.jpg?v=1774437484&width=500"
+                  alt="thumbnail 3"
+                  class="site_flex"
+                  height="50"
+                  width="50"
+                  loading="lazy"
+                />
+              </nav>
+              <div class="pdp_main_image">
+                <img
+                  src="https://cloudbuzz.in/cdn/shop/files/SweetheartSparkleMirrorPhoneCase_10.jpg?v=1774437484&width=500"
+                  alt="Sweetheart Sparkle Mirror Phone Case"
+                  loading="lazy"
+                  class="site_flex"
+                  height="600"
+                  width="600"
+                />
+              </div>
+            </figure>
+
+            <div class="pdp_details site_flex site_flex--column">
+              <p class="pdp_vendor">Cloudbuzz</p>
+              <h1 class="pdp_title">Sweetheart Sparkle Mirror Phone Case</h1>
+              <p class="pdp_price">Rs. 125.00</p>
+
+              <div class="pdp_option site_flex site_flex--column">
+                <label for="model-home"
+                  >Select Model: <b>iPhone 14 Plus</b></label
+                >
+                <div class="select_wrapper">
+                  <select id="model-home" name="model" class="pdp_select">
+                    <option value="iphone14plus" selected>
+                      iPhone 14 Plus
+                    </option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="pdp_option site_flex site_flex--column">
+                <label for="color-home">Select Color: <b>White</b></label>
+                <div class="select_wrapper">
+                  <select id="color-home" name="color" class="pdp_select">
+                    <option value="white" selected>White</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="pdp_quantity site_flex site_flex--column">
+                <label>Quantity:</label>
+                <div class="quantity_selector site_inline_flex align_center">
+                  <button
+                    type="button"
+                    class="qty_btn site_flex align_center justify_center"
+                    aria-label="Decrease quantity"
+                  >
+                    -
+                  </button>
+                  <input
+                    type="number"
+                    value="1"
+                    class="qty_input"
+                    aria-label="Quantity"
+                  />
+                  <button
+                    type="button"
+                    class="qty_btn site_flex align_center justify_center"
+                    aria-label="Increase quantity"
+                  >
+                    +
+                  </button>
+                </div>
+              </div>
+
+              <div class="pdp_actions site_grid">
+                <button type="button" class="btn btn_secondary">
+                  Add to cart
+                </button>
+                <button type="button" class="btn btn_primary">
+                  Buy it now
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="site_section section_cta site_container">
+        <div class="cta_inner">
+          <h2>Join the Cloudbuzz Club</h2>
+          <p>Sign up to get the latest on sales, new releases and more …</p>
+          <form class="cta_form site_flex justify_center">
+            <input
+              type="email"
+              placeholder="Enter your email address"
+              required
+              aria-label="Email address"
+            />
+            <button type="submit" class="btn btn_primary">Subscribe</button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="site_footer site_flex gap_main site_flex--column">
+      <div class="site_container user_pearks">
+        <div class="user_pearks_inner site_grid grid__item--2 gap_sm">
+          <div
+            class="user_pearks_item site_flex site_flex--column gap_sm align_center"
+          >
+            <img
+              src="./assets/support-icon.png"
+              alt="Support Icon"
+              height="50"
+              width="50"
+            />
+            <p>24/7 Customer Support</p>
+          </div>
+
+          <div
+            class="user_pearks_item site_flex site_flex--column gap_sm align_center"
+          >
+            <img
+              src="./assets/secure-icon.png"
+              alt="Secure Icon"
+              height="50"
+              width="50"
+            />
+            <p>Secure Payments</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer_links site_flex site_flex--column gap_main">
+        <div class="site_container site_flex footer_links-cols">
+          <div
+            class="footer_col site_flex gap_sm site_flex--column footer_col--quick-links"
+          >
+            <h4 class="footer_col_title">Quick Links</h4>
+            <ul class="footer_col_items site_flex site_flex--column gap_xs">
+              <li class="footer_col_item">
+                <a href="#" class="footer_col_link">Products</a>
+              </li>
+              <li class="footer_col_item">
+                <a href="#" class="footer_col_link">Collections</a>
+              </li>
+              <li class="footer_col_item">
+                <a href="#" class="footer_col_link">Best Sellers</a>
+              </li>
+              <li class="footer_col_item">
+                <a href="#" class="footer_col_link">New Arrivals</a>
+              </li>
+            </ul>
+          </div>
+          <div
+            class="footer_col site_flex gap_sm site_flex--column footer_col--information"
+          >
+            <h4 class="footer_col_title">Information</h4>
+            <ul class="footer_col_items site_flex site_flex--column gap_xs">
+              <li class="footer_col_item">
+                <a href="#" class="footer_col_link">About Us</a>
+              </li>
+              <li class="footer_col_item">
+                <a href="#" class="footer_col_link">Contact Us</a>
+              </li>
+              <li class="footer_col_item">
+                <a href="#" class="footer_col_link">Privacy Policy</a>
+              </li>
+              <li class="footer_col_item">
+                <a href="#" class="footer_col_link">Terms of Service</a>
+              </li>
+            </ul>
+          </div>
+          <div
+            class="footer_col site_flex gap_sm site_flex--column footer_col--contact-us"
+          >
+            <h4 class="footer_col_title">Contact Us</h4>
+            <ul class="footer_col_items site_flex site_flex--column gap_xs">
+              <li class="footer_col_item">
+                <a href="#" class="footer_col_link">Address</a>
+              </li>
+              <li class="footer_col_item">
+                <a href="tel:+923123456789" class="footer_col_link">Phone</a>
+              </li>
+              <li class="footer_col_item">
+                <a href="mailto:[EMAIL_ADDRESS]" class="footer_col_link"
+                  >Email</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer_bottom">
+          <div class="site_flex site_container">
+            <div class="footer_bottom_left site_flex gap_sm align_center">
+              <img
+                src="https://cloudbuzz.in/cdn/shop/files/t97k980-9.png?v=1708241223&width=280"
+                alt="Logo"
+                height="50"
+                width="80"
+              />
+              <p>&copy; 2026 Cloudbuzz. All rights reserved.</p>
+            </div>
+            <div class="footer_bottom_right site_flex gap_xs align_center">
+              <p>Follow us</p>
+              <ul class="footer_social_links site_flex gap_sm">
+                <li class="footer_social_link">
+                  <a href="#" class="footer_social_link">Facebook</a>
+                </li>
+                <li class="footer_social_link">
+                  <a href="#" class="footer_social_link">Instagram</a>
+                </li>
+                <li class="footer_social_link">
+                  <a href="#" class="footer_social_link">Twitter</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/gh/mansurivilla/horizonslider/prod/js/HorizonSlider.min.js"></script>
+    <script>
+      horizonSlider({
+        ".hero_slider": {
+          loop: true,
+          nav: true,
+          showTracker: false,
+          drag: true,
+          autoplay: {
+            delay: 5000,
+            pauseOnHover: true,
+          },
+          responsive: {
+            0: { items: 1 },
+            768: { items: 1 },
+            1024: { items: 1 },
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

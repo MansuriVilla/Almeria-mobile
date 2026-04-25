@@ -1,0 +1,24 @@
+@media only screen and (max-width: 991px) {
+  .grid__item--2 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .pdp_gallery {
+    flex-direction: column-reverse;
+  }
+  .pdp_thumbnails {
+    flex-direction: row;
+  }
+
+  .footer_links-cols {
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: var(--gap-main);
+  }
+  .footer_bottom .site_flex.site_container {
+    flex-wrap: wrap;
+    gap: var(--gap-md);
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+}
