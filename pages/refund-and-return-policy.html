@@ -3,37 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>All Phone Cases - Almeria mobile</title>
+    <title>Refund and Return Policy - Almeria Mobile</title>
     <link rel="stylesheet" preload href="../styles/style.css" />
-    <link rel="stylesheet" preload href="../styles/responsive.css" />
-    <link
-      rel="shortcut icon"
-      href="../assets/almeria-mobile-fav-icon.png"
-      type="image/x-icon"
-    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <meta property="og:title" content="Almeria mobile" />
-    <meta property="og:description" content="Almeria mobile" />
-    <meta
-      property="og:image"
-      content="../assets/almeria-mobile-link-poster.png"
-    />
-    <meta property="og:url" content="https://almeriamobile.com" />
-    <meta property="og:type" content="website" />
-
-    <meta name="twitter:title" content="Almeria mobile" />
-    <meta name="twitter:description" content="Almeria mobile" />
-    <meta
-      name="twitter:image"
-      content="../assets/almeria-mobile-link-poster.png"
-    />
-    <meta name="twitter:url" content="https://almeriamobile.com" />
-    <meta name="twitter:card" content="summary_large_image" />
     <script src="../scripts/core.js" defer></script>
   </head>
   <body>
@@ -67,23 +44,13 @@
           <span></span>
         </button>
         <a href="../index.html" class="header_left logo">
-          <picture>
-            <source
-              srcset="../assets/almeria-mobile-wordmark.png"
-              media="(min-width: 992px)"
-            />
-            <source
-              srcset="../assets/almeria-mobile-wordmark-icon.png"
-              media="(max-width: 991px)"
-            />
-            <img
-              src="../assets/almeria-mobile-wordmark.png"
-              alt="Logo"
-              height="200"
-              width="400"
-              decoding="async"
-            />
-          </picture>
+          <img
+            src="../assets/almeria-mobile-wordmark.png"
+            alt="Logo"
+            height="200"
+            width="400"
+            decoding="async"
+          />
         </a>
         <nav class="header_center main_navigation site_flex">
           <button class="nav_close" aria-label="Close menu">
@@ -108,7 +75,6 @@
               >
                 <img
                   src="../assets/search-icon.png"
-                  decoding="async"
                   alt="Search icon"
                   height="20"
                   width="20"
@@ -119,26 +85,24 @@
               <a href="../index.html">Home</a>
             </li>
             <li class="header_navigation--item">
-              <a href="demo-collection.html">Mobile Cases</a>
+              <a href="../collections/demo-collection.html">Mobile Cases</a>
             </li>
             <li class="header_navigation--item">
-              <a href="demo-collection.html">Phone Charms</a>
+              <a href="../collections/demo-collection.html">Phone Charms</a>
             </li>
             <li class="header_navigation--item">
-              <a href="demo-collection.html">Tempered Glass</a>
+              <a href="../collections/demo-collection.html">Tempered Glass</a>
             </li>
             <li class="header_navigation--item">
-              <a href="demo-collection.html">Additional Accessories</a>
+              <a href="../collections/demo-collection.html"
+                >Additional Accessories</a
+              >
             </li>
             <li class="header_navigation--item">
-              <a href="demo-collection.html">Collections</a>
+              <a href="../collections/demo-collection.html">Collections</a>
             </li>
-            <li class="header_navigation--item">
-              <a href="../pages/about-us.html">About Us</a>
-            </li>
-            <li class="header_navigation--item">
-              <a href="../pages/contact-us.html">Contact Us</a>
-            </li>
+            <li class="header_navigation--item"><a href="#">About Us</a></li>
+            <li class="header_navigation--item"><a href="#">Contact Us</a></li>
           </ul>
         </nav>
         <div class="header_right">
@@ -146,11 +110,9 @@
             type="button"
             class="header_icon icon_search desktop_only"
             aria-label="Open search"
-            aria-expanded="false"
           >
             <img
               src="../assets/search-icon.png"
-              decoding="async"
               alt="Search icon"
               height="20"
               width="20"
@@ -160,11 +122,9 @@
             type="button"
             class="header_icon icon_cart"
             aria-label="Open cart"
-            aria-expanded="false"
           >
             <img
               src="../assets/cart-icon.png"
-              decoding="async"
               alt="Cart icon"
               height="20"
               width="20"
@@ -207,11 +167,9 @@
           <div class="search_suggestions">
             <p class="search_suggestions--title">Most Popular</p>
             <ul class="search_suggestions--list">
-              <li><a href="#" class="search_suggestion">Mirror Cases</a></li>
-              <li><a href="#" class="search_suggestion">Sparkle Series</a></li>
-              <li><a href="#" class="search_suggestion">Heart Design</a></li>
-              <li><a href="#" class="search_suggestion">Clear Cases</a></li>
-              <li><a href="#" class="search_suggestion">iPhone 14 Cases</a></li>
+              <li><a href="#" class="search_suggestion">Mobile Cases</a></li>
+              <li><a href="#" class="search_suggestion">Phone Charms</a></li>
+              <li><a href="#" class="search_suggestion">Tempered Glass</a></li>
             </ul>
           </div>
         </div>
@@ -235,7 +193,9 @@
             <div class="cart_empty">
               <img src="../assets/cart-icon.png" alt="" />
               <p>Your cart is empty</p>
-              <a href="demo-collection.html" class="btn btn_primary"
+              <a
+                href="../collections/demo-collection.html"
+                class="btn btn_primary"
                 >Start Shopping</a
               >
             </div>
@@ -247,136 +207,147 @@
       </div>
     </header>
 
-    <main
-      class="site_sections site_flex site_flex--column gap_main collection_main_wrapper"
-    >
-      <div class="site_container">
-        <header
-          class="collection_header site_flex justify_between align_center"
-        >
-          <h1 class="collection_title">Phone Cases</h1>
-          <div class="collection_sort site_flex align_center">
-            <label for="sort-by">Sort by:</label>
-            <div class="select_wrapper">
-              <select id="sort-by" name="sort_by" class="pdp_select">
-                <option value="title-ascending">Alphabetically, A-Z</option>
-                <option value="title-descending">Alphabetically, Z-A</option>
-                <option value="price-ascending">Price, low to high</option>
-                <option value="price-descending">Price, high to low</option>
-              </select>
+    <main class="site_sections site_flex site_flex--column gap_main">
+      <section class="site_section site_container">
+        <div class="policy_page">
+          <h1 class="page_title">Refund and Return Policy</h1>
+
+          <div class="policy_content">
+            <p class="intro">
+              At Almeria Mobile, we want you to be completely satisfied with
+              your purchase. If for any reason you are not satisfied with your
+              order, we offer a hassle-free return and refund policy.
+            </p>
+
+            <div class="policy_block">
+              <h2>Return Eligibility</h2>
+              <ul>
+                <li>Returns are accepted within 7 days of delivery</li>
+                <li>
+                  Product must be unused, unwashed, and in original packaging
+                </li>
+                <li>
+                  Product must be in resalable condition with all tags attached
+                </li>
+                <li>
+                  Return request must be initiated by contacting us within 7
+                  days of delivery
+                </li>
+              </ul>
+            </div>
+
+            <div class="policy_block">
+              <h2>Non-Returnable Items</h2>
+              <ul>
+                <li>Products purchased during sale or clearance</li>
+                <li>Customized or personalized products</li>
+                <li>Used or damaged products</li>
+                <li>Products without original tags or packaging</li>
+              </ul>
+            </div>
+
+            <div class="policy_block">
+              <h2>Return Process</h2>
+              <ol>
+                <li>
+                  Contact us on WhatsApp at +91 1234567890 or email at
+                  inquiry@almeriamobile.in within 7 days of delivery
+                </li>
+                <li>Provide your order ID and contact information</li>
+                <li>
+                  Ship the product back to the address provided by our team
+                </li>
+                <li>
+                  Once we receive your return, we will do a quality check on the
+                  product
+                </li>
+                <li>
+                  If the product passes our quality check, we will credit the
+                  amount to your bank account in 5-9 working days
+                </li>
+              </ol>
+            </div>
+
+            <div class="policy_block">
+              <h2>Refund Policy</h2>
+              <p>
+                Please mention your order ID and contact information on the
+                package. Once we have received your return, we will do a quality
+                check on the product at our end, and if the product passes our
+                quality check, we will credit the amount we paid to your bank
+                account in 5-9 working days.
+              </p>
+            </div>
+
+            <div class="policy_block">
+              <h2>Cancellation Policy</h2>
+              <p>
+                We aim to process and dispatch orders as quickly as possible.
+                However, if you wish to cancel your order, please contact us as
+                soon as possible.
+              </p>
+              <p>
+                If the order has not been dispatched, we will cancel it and
+                process a full refund.
+              </p>
+            </div>
+
+            <div class="policy_block important_notes">
+              <h2>Important Notes</h2>
+              <ul>
+                <li>
+                  Processed by us for the same customer because we bear the loss
+                  of two-way packing and courier costs, so in that case we have
+                  the complete right to cancel such an order.
+                </li>
+                <li>
+                  If customer place a Prepaid order and still refuses to accept
+                  the order at the delivery time, it gets returned to us without
+                  accepting the delivery and the same customer will place an
+                  order again. Then we will decide whether to process and
+                  dispatch their order or cancel their order.
+                </li>
+                <li>
+                  As per the company's guidelines, a charge of ₹250 per order
+                  may apply to cover returns or refunds to the customer's bank
+                  account as handling expenses. (₹250 Counted as Two ways
+                  Courier Cost, Packing Cost and Bank Charges)
+                </li>
+                <li>
+                  As per the company's guidelines, to bear the cost or expenses
+                  of material, labor charges, and packaging used in making the
+                  product, the above amount shall be recovered from the
+                  customer.
+                </li>
+              </ul>
+            </div>
+
+            <div class="policy_block">
+              <h2>Questions and Contact Information</h2>
+              <p>For any queries, you can reach us on:</p>
+              <ul class="contact_info">
+                <li>
+                  <strong>Chat via WhatsApp or Call us:</strong> +91 1234567890
+                  (Monday-Saturday, 10:30 AM - 6:30 PM)
+                </li>
+                <li><strong>Email:</strong> inquiry@almeriamobile.in</li>
+              </ul>
+              <p>Or mail us at:</p>
+              <address class="company_address">Address Here</address>
+            </div>
+
+            <div class="policy_block">
+              <h2>Privacy & Data Access</h2>
+              <p>
+                If you would like to: access, correct, amend or delete any
+                personal information we have about you, register a complaint or
+                simply want more information, contact our Privacy Compliance
+                Officer at Almeria Mobile.
+              </p>
             </div>
           </div>
-        </header>
-
-        <div class="collection_layout site_grid">
-          <!-- Sidebar Filters -->
-          <aside class="collection_sidebar">
-            <div class="filter_group">
-              <h3 class="filter_title">Filter by Price</h3>
-              <div class="filter_price">
-                <input
-                  type="range"
-                  class="price_range"
-                  min="0"
-                  max="1000"
-                  step="50"
-                  value="1000"
-                  aria-label="Max price"
-                />
-                <div class="price_labels site_flex">
-                  <span>Rs. 0</span>
-                  <span>Rs. <span class="price_value">1000</span></span>
-                </div>
-              </div>
-            </div>
-          </aside>
-
-          <!-- Product Grid -->
-          <section class="collection_grid site_grid">
-            <a
-              href="../products/demo-product.html"
-              class="product_card site_flex site_flex--column"
-            >
-              <figure class="product_image">
-                <img
-                  src="https://cloudbuzz.in/cdn/shop/files/SweetheartSparkleMirrorPhoneCase_11.jpg?v=1774437484&width=500"
-                  alt="Sweetheart Sparkle Mirror Phone Case"
-                  width="500"
-                  height="500"
-                  loading="lazy"
-                />
-              </figure>
-              <div class="product_info site_flex site_flex--column">
-                <p class="product_vendor">Almeria mobile</p>
-                <h3 class="product_title">
-                  Sweetheart Sparkle Mirror Phone Case
-                </h3>
-                <p class="product_price">Rs. 125.00</p>
-              </div>
-            </a>
-
-            <a
-              href="../products/demo-product.html"
-              class="product_card site_flex site_flex--column"
-            >
-              <figure class="product_image">
-                <img
-                  src="https://cloudbuzz.in/cdn/shop/files/SweetheartSparkleMirrorPhoneCase_1.jpg?v=1774437484&width=500"
-                  alt="Sparkle Mirror Case Series 2"
-                  width="500"
-                  height="500"
-                  loading="lazy"
-                />
-              </figure>
-              <div class="product_info site_flex site_flex--column">
-                <p class="product_vendor">Almeria mobile</p>
-                <h3 class="product_title">Sparkle Mirror Case Series 2</h3>
-                <p class="product_price">Rs. 145.00</p>
-              </div>
-            </a>
-
-            <a
-              href="../products/demo-product.html"
-              class="product_card site_flex site_flex--column"
-            >
-              <figure class="product_image">
-                <img
-                  src="https://cloudbuzz.in/cdn/shop/files/SweetheartSparkleMirrorPhoneCase_3.jpg?v=1774437484&width=500"
-                  alt="Sparkle Mirror Case Clear"
-                  width="500"
-                  height="500"
-                  loading="lazy"
-                />
-              </figure>
-              <div class="product_info site_flex site_flex--column">
-                <p class="product_vendor">Almeria mobile</p>
-                <h3 class="product_title">Sparkle Mirror Case - Clear Style</h3>
-                <p class="product_price">Rs. 110.00</p>
-              </div>
-            </a>
-
-            <a
-              href="../products/demo-product.html"
-              class="product_card site_flex site_flex--column"
-            >
-              <figure class="product_image">
-                <img
-                  src="https://cloudbuzz.in/cdn/shop/files/SweetheartSparkleMirrorPhoneCase_10.jpg?v=1774437484&width=500"
-                  alt="Heart Design Mirror Case"
-                  width="500"
-                  height="500"
-                  loading="lazy"
-                />
-              </figure>
-              <div class="product_info site_flex site_flex--column">
-                <p class="product_vendor">Almeria mobile</p>
-                <h3 class="product_title">Heart Design Mirror Case</h3>
-                <p class="product_price">Rs. 135.00</p>
-              </div>
-            </a>
-          </section>
         </div>
-      </div>
+      </section>
     </main>
 
     <footer class="site_footer site_flex gap_main site_flex--column">
@@ -415,16 +386,32 @@
             <h4 class="footer_col_title">Quick Links</h4>
             <ul class="footer_col_items site_flex site_flex--column gap_xs">
               <li class="footer_col_item">
-                <a href="#" class="footer_col_link">Products</a>
+                <a
+                  href="../collections/demo-collection.html"
+                  class="footer_col_link"
+                  >Products</a
+                >
               </li>
               <li class="footer_col_item">
-                <a href="#" class="footer_col_link">Collections</a>
+                <a
+                  href="../collections/demo-collection.html"
+                  class="footer_col_link"
+                  >Collections</a
+                >
               </li>
               <li class="footer_col_item">
-                <a href="#" class="footer_col_link">Best Sellers</a>
+                <a
+                  href=".../collections/demo-collection.html"
+                  class="footer_col_link"
+                  >Best Sellers</a
+                >
               </li>
               <li class="footer_col_item">
-                <a href="#" class="footer_col_link">New Arrivals</a>
+                <a
+                  href=".../collections/demo-collection.html"
+                  class="footer_col_link"
+                  >New Arrivals</a
+                >
               </li>
             </ul>
           </div>
@@ -434,23 +421,21 @@
             <h4 class="footer_col_title">Information</h4>
             <ul class="footer_col_items site_flex site_flex--column gap_xs">
               <li class="footer_col_item">
-                <a href="../pages/about-us.html" class="footer_col_link"
-                  >About Us</a
-                >
+                <a href="./about-us.html" class="footer_col_link">About Us</a>
               </li>
               <li class="footer_col_item">
-                <a href="../pages/contact-us.html" class="footer_col_link"
+                <a href="./contact-us.html" class="footer_col_link"
                   >Contact Us</a
                 >
               </li>
               <li class="footer_col_item">
-                <a href="../pages/privacy-policy.html" class="footer_col_link"
+                <a href="./privacy-policy.html" class="footer_col_link"
                   >Privacy Policy</a
                 >
               </li>
               <li class="footer_col_item">
                 <a
-                  href="../pages/refund-and-return-policy.html"
+                  href="./refund-and-return-policy.html"
                   class="footer_col_link"
                   >Refund and Return Policy</a
                 >

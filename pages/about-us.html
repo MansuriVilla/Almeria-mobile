@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>All Phone Cases - Almeria mobile</title>
+    <title>About Us - Almeria mobile</title>
     <link rel="stylesheet" preload href="../styles/style.css" />
     <link rel="stylesheet" preload href="../styles/responsive.css" />
     <link
@@ -119,25 +119,27 @@
               <a href="../index.html">Home</a>
             </li>
             <li class="header_navigation--item">
-              <a href="demo-collection.html">Mobile Cases</a>
+              <a href="../collections/demo-collection.html">Mobile Cases</a>
             </li>
             <li class="header_navigation--item">
-              <a href="demo-collection.html">Phone Charms</a>
+              <a href="../collections/demo-collection.html">Phone Charms</a>
             </li>
             <li class="header_navigation--item">
-              <a href="demo-collection.html">Tempered Glass</a>
+              <a href="../collections/demo-collection.html">Tempered Glass</a>
             </li>
             <li class="header_navigation--item">
-              <a href="demo-collection.html">Additional Accessories</a>
+              <a href="../collections/demo-collection.html"
+                >Additional Accessories</a
+              >
             </li>
             <li class="header_navigation--item">
-              <a href="demo-collection.html">Collections</a>
+              <a href="../collections/demo-collection.html">Collections</a>
             </li>
             <li class="header_navigation--item">
-              <a href="../pages/about-us.html">About Us</a>
+              <a href="./about-us.html">About Us</a>
             </li>
             <li class="header_navigation--item">
-              <a href="../pages/contact-us.html">Contact Us</a>
+              <a href="./contact-us.html">Contact Us</a>
             </li>
           </ul>
         </nav>
@@ -235,7 +237,9 @@
             <div class="cart_empty">
               <img src="../assets/cart-icon.png" alt="" />
               <p>Your cart is empty</p>
-              <a href="demo-collection.html" class="btn btn_primary"
+              <a
+                href="../collections/demo-collection.html"
+                class="btn btn_primary"
                 >Start Shopping</a
               >
             </div>
@@ -248,137 +252,72 @@
     </header>
 
     <main
-      class="site_sections site_flex site_flex--column gap_main collection_main_wrapper"
+      class="site_sections site_flex site_flex--column gap_main page_main_wrapper"
     >
-      <div class="site_container">
-        <header
-          class="collection_header site_flex justify_between align_center"
-        >
-          <h1 class="collection_title">Phone Cases</h1>
-          <div class="collection_sort site_flex align_center">
-            <label for="sort-by">Sort by:</label>
-            <div class="select_wrapper">
-              <select id="sort-by" name="sort_by" class="pdp_select">
-                <option value="title-ascending">Alphabetically, A-Z</option>
-                <option value="title-descending">Alphabetically, Z-A</option>
-                <option value="price-ascending">Price, low to high</option>
-                <option value="price-descending">Price, high to low</option>
-              </select>
-            </div>
+      <section
+        class="site_section section_page site_container section_text--only"
+      >
+        <article class="page_layout site_flex site_flex--column gap_main">
+          <h1 class="page_title">About Us</h1>
+          <div class="page_content">
+            <h3>All Mobile Accessories At Your Doorstep Within 3 Clicks:</h3>
+            <p>
+              Almeria Mobile is a one-stop solution for all your needs of mobile
+              accessories. Order online your desired products, an add-on to your
+              phone, and charm.
+            </p>
+            <p>
+              In today’s times where mobile phones act as bridges between the
+              world and us, they are more than just phones. Allow us to make
+              your little world smarter, and your life easier at affordable
+              prices. Do away with surfing various websites with limited and
+              repetitive options. Imagine a mobile accessory and we will deliver
+              it to your doorstep.
+            </p>
+            <h3>Boundless Products</h3>
+            <p>
+              We do not just claim to offer a wide range of mobile accessories;
+              we prove it. Buy any phone cover, tempered glass, chargers,
+              cables, printed merchandise, and many, more, out of thousands of
+              products which are carefully picked by our quality-oriented team.
+            </p>
+            <h3>Affordable Price And Customization</h3>
+            <p>
+              We promise to bring you the best at the best prices. We offer
+              personalized and customized products from classy, to casual to
+              trendy, whether you are a student or a corporate.
+            </p>
+            <h3>No Compromise Over Quality</h3>
+            <p>
+              We believe in the supremacy of quality, even at nominal prices.
+              Our products are designed by creative minds, manufactured by
+              industry experts, and imported from across the seas; still
+              maintaining the quality.
+            </p>
+            <h3>Shipping Across India</h3>
+            <p>
+              From a remote place to a busy metro city, get your favorite mobile
+              accessories delivered to your home
+            </p>
+            <h3>Easy Refund Policy</h3>
+            <p>
+              Return the products that do not match your expectations, without
+              any hassle.
+            </p>
+            <h3>Quick Customer Support</h3>
+            <p>
+              Our team is always available to hear your queries and solve them
+              immediately, with passion
+            </p>
+            <h3>Coupons And Deals</h3>
+            <p>
+              Apply various promo codes and coupons, get amazing offers, and buy
+              amazing mobile accessories
+            </p>
           </div>
-        </header>
-
-        <div class="collection_layout site_grid">
-          <!-- Sidebar Filters -->
-          <aside class="collection_sidebar">
-            <div class="filter_group">
-              <h3 class="filter_title">Filter by Price</h3>
-              <div class="filter_price">
-                <input
-                  type="range"
-                  class="price_range"
-                  min="0"
-                  max="1000"
-                  step="50"
-                  value="1000"
-                  aria-label="Max price"
-                />
-                <div class="price_labels site_flex">
-                  <span>Rs. 0</span>
-                  <span>Rs. <span class="price_value">1000</span></span>
-                </div>
-              </div>
-            </div>
-          </aside>
-
-          <!-- Product Grid -->
-          <section class="collection_grid site_grid">
-            <a
-              href="../products/demo-product.html"
-              class="product_card site_flex site_flex--column"
-            >
-              <figure class="product_image">
-                <img
-                  src="https://cloudbuzz.in/cdn/shop/files/SweetheartSparkleMirrorPhoneCase_11.jpg?v=1774437484&width=500"
-                  alt="Sweetheart Sparkle Mirror Phone Case"
-                  width="500"
-                  height="500"
-                  loading="lazy"
-                />
-              </figure>
-              <div class="product_info site_flex site_flex--column">
-                <p class="product_vendor">Almeria mobile</p>
-                <h3 class="product_title">
-                  Sweetheart Sparkle Mirror Phone Case
-                </h3>
-                <p class="product_price">Rs. 125.00</p>
-              </div>
-            </a>
-
-            <a
-              href="../products/demo-product.html"
-              class="product_card site_flex site_flex--column"
-            >
-              <figure class="product_image">
-                <img
-                  src="https://cloudbuzz.in/cdn/shop/files/SweetheartSparkleMirrorPhoneCase_1.jpg?v=1774437484&width=500"
-                  alt="Sparkle Mirror Case Series 2"
-                  width="500"
-                  height="500"
-                  loading="lazy"
-                />
-              </figure>
-              <div class="product_info site_flex site_flex--column">
-                <p class="product_vendor">Almeria mobile</p>
-                <h3 class="product_title">Sparkle Mirror Case Series 2</h3>
-                <p class="product_price">Rs. 145.00</p>
-              </div>
-            </a>
-
-            <a
-              href="../products/demo-product.html"
-              class="product_card site_flex site_flex--column"
-            >
-              <figure class="product_image">
-                <img
-                  src="https://cloudbuzz.in/cdn/shop/files/SweetheartSparkleMirrorPhoneCase_3.jpg?v=1774437484&width=500"
-                  alt="Sparkle Mirror Case Clear"
-                  width="500"
-                  height="500"
-                  loading="lazy"
-                />
-              </figure>
-              <div class="product_info site_flex site_flex--column">
-                <p class="product_vendor">Almeria mobile</p>
-                <h3 class="product_title">Sparkle Mirror Case - Clear Style</h3>
-                <p class="product_price">Rs. 110.00</p>
-              </div>
-            </a>
-
-            <a
-              href="../products/demo-product.html"
-              class="product_card site_flex site_flex--column"
-            >
-              <figure class="product_image">
-                <img
-                  src="https://cloudbuzz.in/cdn/shop/files/SweetheartSparkleMirrorPhoneCase_10.jpg?v=1774437484&width=500"
-                  alt="Heart Design Mirror Case"
-                  width="500"
-                  height="500"
-                  loading="lazy"
-                />
-              </figure>
-              <div class="product_info site_flex site_flex--column">
-                <p class="product_vendor">Almeria mobile</p>
-                <h3 class="product_title">Heart Design Mirror Case</h3>
-                <p class="product_price">Rs. 135.00</p>
-              </div>
-            </a>
-          </section>
-        </div>
-      </div>
+        </article>
+      </section>
     </main>
-
     <footer class="site_footer site_flex gap_main site_flex--column">
       <div class="site_container user_pearks">
         <div class="user_pearks_inner site_grid grid__item--2 gap_sm">
@@ -415,16 +354,32 @@
             <h4 class="footer_col_title">Quick Links</h4>
             <ul class="footer_col_items site_flex site_flex--column gap_xs">
               <li class="footer_col_item">
-                <a href="#" class="footer_col_link">Products</a>
+                <a
+                  href="../collections/demo-collection.html"
+                  class="footer_col_link"
+                  >Products</a
+                >
               </li>
               <li class="footer_col_item">
-                <a href="#" class="footer_col_link">Collections</a>
+                <a
+                  href="../collections/demo-collection.html"
+                  class="footer_col_link"
+                  >Collections</a
+                >
               </li>
               <li class="footer_col_item">
-                <a href="#" class="footer_col_link">Best Sellers</a>
+                <a
+                  href=".../collections/demo-collection.html"
+                  class="footer_col_link"
+                  >Best Sellers</a
+                >
               </li>
               <li class="footer_col_item">
-                <a href="#" class="footer_col_link">New Arrivals</a>
+                <a
+                  href=".../collections/demo-collection.html"
+                  class="footer_col_link"
+                  >New Arrivals</a
+                >
               </li>
             </ul>
           </div>
@@ -434,23 +389,21 @@
             <h4 class="footer_col_title">Information</h4>
             <ul class="footer_col_items site_flex site_flex--column gap_xs">
               <li class="footer_col_item">
-                <a href="../pages/about-us.html" class="footer_col_link"
-                  >About Us</a
-                >
+                <a href="./about-us.html" class="footer_col_link">About Us</a>
               </li>
               <li class="footer_col_item">
-                <a href="../pages/contact-us.html" class="footer_col_link"
+                <a href="./contact-us.html" class="footer_col_link"
                   >Contact Us</a
                 >
               </li>
               <li class="footer_col_item">
-                <a href="../pages/privacy-policy.html" class="footer_col_link"
+                <a href="./privacy-policy.html" class="footer_col_link"
                   >Privacy Policy</a
                 >
               </li>
               <li class="footer_col_item">
                 <a
-                  href="../pages/refund-and-return-policy.html"
+                  href="./refund-and-return-policy.html"
                   class="footer_col_link"
                   >Refund and Return Policy</a
                 >
