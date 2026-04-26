@@ -880,9 +880,11 @@ h4 {
   gap: var(--gap-xs);
   position: sticky;
   top: 120px;
+  flex-direction: column-reverse;
 }
 .pdp_thumbnails {
   gap: var(--gap-min);
+  flex-direction: row;
 }
 .pdp_thumbnails img {
   width: clamp(50px, 6vw, 60px);
@@ -901,7 +903,7 @@ h4 {
 .pdp_main_image img {
   width: 100%;
   height: auto;
-  aspect-ratio: 1;
+  aspect-ratio: 1.15;
   object-fit: cover;
   border-radius: var(--radius-lg);
 }
@@ -1045,7 +1047,7 @@ h4 {
 
 /* Actions */
 .pdp_actions {
-  gap: var(--gap-sm);
+  gap: var(--gap-xs);
   margin-top: 10px;
 }
 .btn {
