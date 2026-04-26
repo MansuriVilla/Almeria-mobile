@@ -639,13 +639,14 @@
                   class="site_flex"
                   height="400"
                   width="400"
+                  data-product-image
                 />
               </div>
             </figure>
             <div class="pdp_details site_flex site_flex--column">
               <p class="pdp_vendor">Almeria Mobile Care</p>
-              <h1 class="pdp_title">Sweetheart Sparkle Mirror Phone Case</h1>
-              <p class="pdp_price">Rs. 125.00</p>
+              <h1 class="pdp_title" data-product-title>Sweetheart Sparkle Mirror Phone Case</h1>
+              <p class="pdp_price" data-product-price>Rs. 125.00</p>
 
               <div class="pdp_option site_flex site_flex--column">
                 <label for="model">Select Model: <b>iPhone 14 Plus</b></label>
@@ -718,7 +719,11 @@
             </div> -->
 
               <div class="pdp_actions site_grid">
-                <button type="button" class="btn btn_secondary">
+                <button
+                  type="button"
+                  class="btn btn_secondary"
+                  data-add-product
+                >
                   Add to cart
                 </button>
                 <button type="button" class="btn btn_primary">

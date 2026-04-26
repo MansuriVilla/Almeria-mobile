@@ -374,60 +374,78 @@ function updateCartUI() {
 
 function addToCart(e) {
   const addBtn = e.currentTarget;
-  const pdp = addBtn.closest(".pdp_details");
-  if (!pdp || !addBtn) return;
+  if (!addBtn) return;
 
   // Visual feedback
   const originalText = addBtn.textContent;
   addBtn.textContent = "Adding...";
   addBtn.disabled = true;
 
-  const titleNode = pdp.querySelector(".pdp_title");
-  const priceNode = pdp.querySelector(".pdp_price");
-  const imgNode = document.querySelector(".pdp_main_image img");
-  const qtyNode =
-    pdp.querySelector(".qty_input") || document.querySelector(".qty_input");
+  // Find data from attributes on elements (Preferred over classes)
+  const pdp = addBtn.closest(".pdp_details") || document.querySelector(".pdp_details") || addBtn.closest(".product_card");
+  
+  let title = "";
+  let price = NaN;
+  let image = "";
 
-  if (!titleNode || !priceNode) {
+  if (pdp) {
+    const titleEl = pdp.querySelector("[data-product-title]");
+    const priceEl = pdp.querySelector("[data-product-price]");
+    const imageEl = pdp.querySelector("[data-product-image]");
+
+    if (titleEl) title = titleEl.textContent.trim();
+    if (priceEl) {
+      const priceText = priceEl.textContent.trim();
+      const priceMatch = priceText.match(/\d+(\.\d+)?/);
+      price = priceMatch ? parseFloat(priceMatch[0]) : 0;
+    }
+    if (imageEl) {
+      image = imageEl.src || imageEl.getAttribute("src") || imageEl.getAttribute("data-src");
+    }
+  }
+
+  // Fallback to legacy classes if data attributes are missing
+  if (!title && pdp) {
+    const titleNode = pdp.querySelector(".pdp_title");
+    if (titleNode) title = titleNode.textContent.trim();
+  }
+
+  if (isNaN(price) && pdp) {
+    const priceNode = pdp.querySelector(".pdp_price");
+    if (priceNode) {
+      const priceText = priceNode.textContent.trim();
+      const priceMatch = priceText.match(/\d+(\.\d+)?/);
+      price = priceMatch ? parseFloat(priceMatch[0]) : 0;
+    }
+  }
+
+  if (!image) {
+    const imgNode = (pdp ? pdp.querySelector(".pdp_main_image img, .product_image img") : null) || document.querySelector(".pdp_main_image img");
+    if (imgNode) image = imgNode.src;
+  }
+
+  // Mandatory checks
+  if (!title || isNaN(price)) {
+    console.error("Product title or price missing", { title, price });
     addBtn.textContent = originalText;
     addBtn.disabled = false;
     return;
   }
 
-  const title = titleNode.textContent.trim();
-  const priceText = priceNode.textContent.trim();
-
-  // More robust price extraction: find the first sequence of numbers/dots
-  const priceMatch = priceText.match(/\d+(\.\d+)?/);
-  const price = priceMatch ? parseFloat(priceMatch[0]) : 0;
-
-  const image = imgNode ? imgNode.src : "";
+  // Quantity and Variants (Dynamic inputs)
+  const qtyNode = pdp ? (pdp.querySelector(".qty_input") || document.querySelector(".qty_input")) : document.querySelector(".qty_input");
   const quantity = qtyNode ? parseInt(qtyNode.value, 10) : 1;
 
-  const modelSelect =
-    pdp.querySelector("#model, #model-home") ||
-    document.querySelector("#model, #model-home");
-  const colorSelect =
-    pdp.querySelector("#color, #color-home") ||
-    document.querySelector("#color, #color-home");
+  const modelSelect = pdp ? (pdp.querySelector("#model, #model-home") || document.querySelector("#model, #model-home")) : document.querySelector("#model, #model-home");
+  const colorSelect = pdp ? (pdp.querySelector("#color, #color-home") || document.querySelector("#color, #color-home")) : document.querySelector("#color, #color-home");
 
   const selectedModel = modelSelect ? modelSelect.value : "";
   const selectedColor = colorSelect ? colorSelect.value : "";
-  const variant = `${selectedModel} / ${selectedColor}`;
+  const variant = `${selectedModel}${selectedModel && selectedColor ? " / " : ""}${selectedColor}`;
 
-  // Capture available options for editing in cart
-  const models = modelSelect
-    ? Array.from(modelSelect.options).map((o) => ({
-        value: o.value,
-        text: o.text,
-      }))
-    : [];
-  const colors = colorSelect
-    ? Array.from(colorSelect.options).map((o) => ({
-        value: o.value,
-        text: o.text,
-      }))
-    : [];
+  // Capture options for cart editing
+  const models = modelSelect ? Array.from(modelSelect.options).map(o => ({ value: o.value, text: o.text })) : [];
+  const colors = colorSelect ? Array.from(colorSelect.options).map(o => ({ value: o.value, text: o.text })) : [];
 
   const cart = getCart();
   const existingItemIndex = cart.findIndex(
@@ -552,7 +570,7 @@ function initVariantSelectors() {
 }
 
 function initAddToCart() {
-  const addBtns = document.querySelectorAll(".pdp_actions .btn_secondary");
+  const addBtns = document.querySelectorAll("[data-add-product]");
   addBtns.forEach((btn) => {
     btn.addEventListener("click", addToCart);
   });
