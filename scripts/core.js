@@ -344,12 +344,30 @@ function updateCartUI() {
   cartContent.innerHTML = html;
 
   if (cartFooter) {
+    const threshold = 2000;
+    const remaining = threshold - total;
+    const progress = Math.min((total / threshold) * 100, 100);
+    const isComplete = total >= threshold;
+
+    let thresholdMessage = "";
+    if (isComplete) {
+      thresholdMessage = "🎉 You are eligible for <strong>FREE shipping</strong> and checkout!";
+    } else {
+      thresholdMessage = `Add <strong>Rs. ${remaining.toFixed(2)}</strong> more to unlock checkout`;
+    }
+
     cartFooter.innerHTML = `
+      <div class="cart_threshold_progress">
+        <p class="threshold_message">${thresholdMessage}</p>
+        <div class="progress_bar_outer">
+          <div class="progress_bar_inner ${isComplete ? "complete" : ""}" style="width: ${progress}%"></div>
+        </div>
+      </div>
       <div class="cart_total site_flex justify_between align_center">
         <span>Total</span>
         <span class="total_amount">Rs. ${total.toFixed(2)}</span>
       </div>
-      <a href="#" class="btn btn_primary">Checkout</a>
+      <button type="button" class="btn btn_primary" ${!isComplete ? "disabled" : ""}>Checkout</button>
     `;
   }
 }
